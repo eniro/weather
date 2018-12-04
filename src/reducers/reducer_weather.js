@@ -1,7 +1,7 @@
 import { FETCH_WEATHER } from '../actions/index';
 
 
-export default (state = null, action) => {
+export default function(state='hello', action) {
     switch (action.type) {
         case FETCH_WEATHER:
             return [action.payload.data, ...state];
